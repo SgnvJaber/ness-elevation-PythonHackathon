@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Environment>
-	<Browser>edge</Browser>
+    <Browser>chrome</Browser>
+    <webUrl>http://localhost:4000</webUrl>
+    <username>Katharina_Bernier</username>
+    <password>s3cret</password>
+    <host>sql11.freemysqlhosting.net</host>
+    <usernameDB>sql11454991</usernameDB>
+    <databaseDB>sql11454991</databaseDB>
+    <passwordDB>6lcdegJM51</passwordDB>
 </Environment>
