@@ -14,4 +14,8 @@ get_started_form_page = None
 desktop_calc = None
 my_calculation = []
 
+# Appium Page Objects
+fn_main = None
+fn_calculator = None
+
 action = None

@@ -5,7 +5,6 @@ from selenium.webdriver import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from configuration.edge_driver_fix import EdgeChromiumDriverManager
-from main.extensions.db_actions import DB_Actions
 from main.utilities import base
 from main.utilities.common_ops import Common_Ops
 from main.utilities.manage_pages import Manage_Pages
@@ -44,6 +43,7 @@ def init_appium(request):
     desired_caps['appActivity'] = '.FinancialCalculators'
     desired_caps['platformName'] = 'android'
     base.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+    Manage_Pages.init_appium_pages(base.driver)
     yield
     base.driver.quit()
 

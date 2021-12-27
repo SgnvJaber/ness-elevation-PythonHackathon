@@ -1,4 +1,6 @@
 from main.pageObjects.calculator_desktop.calculator_page import Calculator_Page
+from main.pageObjects.finan_calculator_appium.fn_calculator_page import Fn_Calculator_Page
+from main.pageObjects.finan_calculator_appium.fn_main_page import Fn_Main_Page
 from main.pageObjects.real_world_web.get_started_form_page import Get_Started_Form_Page
 from main.pageObjects.real_world_web.menu_page import Menu_Page
 from main.pageObjects.real_world_web.login_page import Login_Page
@@ -23,3 +25,8 @@ class Manage_Pages:
     @staticmethod
     def init_desktop_pages(driver):
         base.desktop_calc = Calculator_Page(driver)
+
+    @staticmethod
+    def init_appium_pages(driver):
+        base.fn_main = Fn_Main_Page(driver)
+        base.fn_calculator = Fn_Calculator_Page(driver)

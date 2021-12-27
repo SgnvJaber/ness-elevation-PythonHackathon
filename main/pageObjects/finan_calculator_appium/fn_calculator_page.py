@@ -26,19 +26,3 @@ class Fn_Calculator_Page():
     @allure.step("Get Result")
     def get_result_element(self):
         return self.driver.find_element(By.XPATH, "//*[@id='formula']")
-
-    @allure.step("Multiply Operation")
-    def action_get_multiply_result(self, first_input, second_input):
-        self.get_number_field(first_input).click()
-        self.get_mult_button_element().click()
-        self.get_number_field(second_input).click()
-        self.get_equal_button_element().click()
-        return self.get_result_element().text
-
-    @allure.step("Add Operation")
-    def action_get_add_result(self, first_input, second_input):
-        self.get_number_field(first_input).click()
-        self.get_add_button_element().click()
-        self.get_number_field(second_input).click()
-        self.get_equal_button_element().click()
-        return self.get_result_element().text

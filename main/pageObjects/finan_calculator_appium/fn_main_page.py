@@ -18,15 +18,3 @@ class Fn_Main_Page():
     def get_calculator_element(self):
         return self.driver.find_element(By.XPATH, "//*[@text='Calculator']")
 
-    @allure.step
-    @allure.step("Get List Size")
-    def action_get_list_size(self):
-        return len(self.get_list_of_items())
-
-    @allure.step("Get App Title")
-    def action_get_app_title(self):
-        return self.get_title_element().text
-
-    @allure.step("Navigate to Calculator")
-    def action_get_navigate_to_calculator(self):
-        self.get_calculator_element().click()
