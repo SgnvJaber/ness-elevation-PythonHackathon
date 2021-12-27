@@ -12,6 +12,4 @@ class Test_Real_World_Web:
 
     def test_verifyX(self):
         print("Hello")
-        print(configuration.conftest.mydb)
-        DB_Actions.get_list_of_new_users(configuration.conftest.mydb)
-        print(DB_Actions.get_list_of_new_users(configuration.conftest.mydb))
+        print(DB_Actions.get_list_of_new_users())

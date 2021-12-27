@@ -3,25 +3,20 @@ import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
-
 from configuration.edge_driver_fix import EdgeChromiumDriverManager
+from main.utilities import base
 from main.utilities.common_ops import Common_Ops
 from main.utilities.manage_pages import Manage_Pages
 
-# global driver
-# global mydb
-driver = None
-mydb = None
 
 @pytest.fixture(scope='class')
 def init_web_app(request):
     init_driver(request)
-    Manage_Pages.init_web_pages(driver)
-    globals()["mydb"] = init_DB()
-    request.cls.mydb = globals()["mydb"]
+    Manage_Pages.init_web_pages(base.driver)
+    base.my_db = init_DB()
     yield
-    mydb.close()
-    driver.quit()
+    base.my_db.close()
+    base.driver.quit()
 
 
 def init_DB():
@@ -43,6 +38,5 @@ def init_driver(request):
         driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
     else:
         raise Exception("Invalid Browser Type")
-    globals()["driver"] = driver
-    driver.get("http://localhost:4000/")
-    # request.cls.driver = driver
+    base.driver = driver
+    base.driver.get("http://localhost:4000/")
