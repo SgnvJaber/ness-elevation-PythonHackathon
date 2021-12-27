@@ -21,20 +21,7 @@
 #
 #     def teardown_class(self):
 #         driver.quit()
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
 # #          driver.find_element(By.ID, "button-ipc").click()
 # #         driver.find_element(By.CSS_SELECTOR, ".u-category-communication .is-open .demo-controls .demo-button").click()
 # #         assert driver.find_element(By.CSS_SELECTOR,
