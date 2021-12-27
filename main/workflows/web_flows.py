@@ -64,3 +64,27 @@ class Web_Flows():
         Ui_Actions.click(base.get_started_form_page.get_save_data_btn())
         Ui_Actions.click(base.get_started_form_page.get_done_btn())
 
+    @staticmethod
+    @allure.step("make a transaction")
+    def make_transaction(contact_name, amount_to_transact, transaction_note):
+        Ui_Actions.click(base.navbar_page.get_new_transaction())
+        Ui_Actions.update_text(base.transaction_page.get_search_input(), contact_name)
+        Ui_Actions.click(base.transaction_page.get_contact_person())
+        Ui_Actions.update_text(base.transaction_page.get_amount_input(), amount_to_transact)
+        Ui_Actions.update_text(base.transaction_page.get_note_input(), transaction_note)
+        current_balance = base.menu_page.get_balance().text.split('$')[1]
+        Ui_Actions.click(base.transaction_page.get_payment_submit())
+        time.sleep(5)
+        return current_balance
+
+    @staticmethod
+    @allure.step("get a menus size")
+    def get_menus_size():
+       return len(base.menu_page.get_menus_size())
+
+
+
+
+
+
+

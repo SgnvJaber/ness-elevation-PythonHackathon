@@ -7,3 +7,9 @@ class Common_Ops:
     def get_data(node_name):
         root = ET.parse('..\configuration\configuration.xml').getroot()
         return root.find(".//" + node_name).text
+
+    @staticmethod
+    def replace_comma(num):
+        if ',' in num:
+            return num.replace(',', '')
+        return num

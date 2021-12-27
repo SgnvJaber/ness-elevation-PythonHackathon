@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Environment>
     <Browser>chrome</Browser>
+    <!-- Test 1 - Login -->
     <webUrl>http://localhost:4000</webUrl>
     <username>Katharina_Bernier</username>
     <password>s3cret</password>
     <expected_balance>0</expected_balance>
+
     <!--  DB   -->
     <host>sql11.freemysqlhosting.net</host>
     <usernameDB>sql11454991</usernameDB>
     <databaseDB>sql11454991</databaseDB>
     <passwordDB>6lcdegJM51</passwordDB>
+
+    <!-- Test 3 - Transaction -->
+    <contactNameToSearch>Arely Kertzmann</contactNameToSearch>
+    <amountToTransact>3</amountToTransact>
+    <transactNote>Payment for the car</transactNote>
+
+    <!-- Test 4 - Transaction -->
+    <menusSize>4</menusSize>
+
 </Environment>

@@ -22,6 +22,7 @@ def init_web_app(request):
     base.driver.quit()
 
 
+
 def init_DB():
     mydb = mysql.connector.connect(
         host=Common_Ops.get_data("host"),

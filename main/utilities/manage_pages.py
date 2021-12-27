@@ -1,7 +1,9 @@
 from main.pageObjects.real_world.get_started_form_page import Get_Started_Form_Page
 from main.pageObjects.real_world.menu_page import Menu_Page
 from main.pageObjects.real_world.login_page import Login_Page
+from main.pageObjects.real_world.nav_bar_page import NavBar_Page
 from main.pageObjects.real_world.signup_page import Signup_Page
+from main.pageObjects.real_world.transaction_page import Transaction_Page
 from main.utilities import base
 
 login_page = None
@@ -14,5 +16,7 @@ class Manage_Pages:
         base.signup_page = Signup_Page(driver)
         base.menu_page = Menu_Page(driver)
         base.get_started_form_page = Get_Started_Form_Page(driver)
+        base.navbar_page=NavBar_Page(driver)
+        base.transaction_page=Transaction_Page(driver)
 
 

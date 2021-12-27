@@ -19,7 +19,9 @@ class Menu_Page():
     def get_username_logged_in(self):
         return self.driver.find_element(By.CSS_SELECTOR, "[data-test='sidenav-username']")
 
-    @allure.step("Get new transaction")
-    def get_new_transaction(self):
-        return self.driver.find_element(By.CSS_SELECTOR, '//*[@data-test="nav-top-new-transaction"]')
+    @allure.step("Get menus size")
+    def get_menus_size(self):
+        return self.driver.find_elements(By.XPATH, "(//*[@class='MuiList-root MuiList-padding'])[1]//a")
+
+
 
