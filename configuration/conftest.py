@@ -5,6 +5,7 @@ from selenium.webdriver import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from configuration.edge_driver_fix import EdgeChromiumDriverManager
+from main.extensions.db_actions import DB_Actions
 from main.utilities import base
 from main.utilities.common_ops import Common_Ops
 from main.utilities.manage_pages import Manage_Pages
@@ -21,6 +22,30 @@ def init_web_app(request):
     base.my_db.close()
     base.driver.quit()
 
+
+@pytest.fixture(scope='class')
+def init_desktop(request):
+    desired_caps = {}
+    desired_caps["app"] = "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
+    desired_caps["platformName"] = "Windows"
+    desired_caps["deviceName"] = "WindowsPC"
+    base.driver = webdriver.Remote("http://127.0.0.1:4723", desired_caps)
+    Manage_Pages.init_desktop_pages(base.driver)
+    base.driver.implicitly_wait(5)
+    yield
+    base.driver.quit()
+
+
+@pytest.fixture(scope='class')
+def init_appium(request):
+    desired_caps = {}
+    desired_caps['udid'] = 'ce051605b5d4d82c03'
+    desired_caps['appPackage'] = 'com.financial.calculator'
+    desired_caps['appActivity'] = '.FinancialCalculators'
+    desired_caps['platformName'] = 'android'
+    base.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+    yield
+    base.driver.quit()
 
 
 def init_DB():
@@ -43,4 +68,4 @@ def init_driver(request):
     else:
         raise Exception("Invalid Browser Type")
     base.driver = driver
-    base.driver.get("http://localhost:4000/")
+    base.driver.get(Common_Ops.get_data("webUrl"))

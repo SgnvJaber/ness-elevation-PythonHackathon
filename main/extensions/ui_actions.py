@@ -13,7 +13,7 @@ class Ui_Actions:
         element.click()
 
     @staticmethod
-    @allure.step("Click on element")
+    @allure.step("Double click on element")
     def elem_double_click(element):
         element.click()
         element.click()
@@ -22,3 +22,8 @@ class Ui_Actions:
     @allure.step("Update element text")
     def update_text(element, text):
         element.send_keys(text)
+
+    @staticmethod
+    @allure.step("Get text from element")
+    def get_text(element):
+        return element.text
