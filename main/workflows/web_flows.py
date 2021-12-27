@@ -27,6 +27,8 @@ class Web_Flows():
         for new_user in list_of_users:
             Web_Flows.add_new_user(new_user)
             Web_Flows.verify_new_user_added(new_user)
+            if len(base.get_started_form_page.get_list_of_forms()) > 0:
+                Web_Flows.fill_get_started_form(new_user)
             Web_Flows.action_log_out()
 
 
@@ -51,3 +53,14 @@ class Web_Flows():
     def verify_new_user_added(new_user):
         Web_Flows.action_sign_in(new_user[2], new_user[3])
         verifications.do_soft_assert(new_user[2], base.menu_page.get_username_logged_in().text.split('@')[1])
+
+    @staticmethod
+    @allure.step("signup new user")
+    def fill_get_started_form(new_user):
+        Ui_Actions.click(base.get_started_form_page.get_first_page_next_btn())
+        Ui_Actions.update_text(base.get_started_form_page.get_bank_name_input(), new_user[4])
+        Ui_Actions.update_text(base.get_started_form_page.get_routing_number_input(), new_user[5])
+        Ui_Actions.update_text(base.get_started_form_page.get_account_number_input(), new_user[6])
+        Ui_Actions.click(base.get_started_form_page.get_save_data_btn())
+        Ui_Actions.click(base.get_started_form_page.get_done_btn())
+
