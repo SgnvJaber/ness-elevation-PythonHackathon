@@ -25,5 +25,3 @@ class Transaction_Page:
     @allure.step("Get submit payment")
     def get_payment_submit(self):
         return self.driver.find_element(By.XPATH, '//*[@data-test="transaction-create-submit-payment"]')
-
-

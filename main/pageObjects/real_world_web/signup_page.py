@@ -1,20 +1,17 @@
-import time
-
 import allure
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Signup_Page():
     def __init__(self, driver):
         self.driver = driver
 
-    @allure.step("Get firstName field Element")
-    def get_firstName_field(self):
+    @allure.step("Get first name field Element")
+    def get_first_name_field(self):
         return self.driver.find_element(By.ID, "firstName")
 
-    @allure.step("Get lastName field Element")
-    def get_lastName_field(self):
+    @allure.step("Get last name field Element")
+    def get_last_name_field(self):
         return self.driver.find_element(By.ID, "lastName")
 
     @allure.step("Get username field Element")
@@ -25,8 +22,8 @@ class Signup_Page():
     def get_password_field(self):
         return self.driver.find_element(By.ID, "password")
 
-    @allure.step("Get confirmPassword field Element")
-    def get_confirmPassword_field(self):
+    @allure.step("Get confirm password field Element")
+    def get_confirm_password_field(self):
         return self.driver.find_element(By.ID, "confirmPassword")
 
     @allure.step("Get submit button")

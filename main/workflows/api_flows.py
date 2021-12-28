@@ -1,10 +1,6 @@
 import json
-
 import allure
-import requests
-
 from main.extensions.api_actions import Api_Actions
-from main.utilities import base
 
 
 class Api_Flows:

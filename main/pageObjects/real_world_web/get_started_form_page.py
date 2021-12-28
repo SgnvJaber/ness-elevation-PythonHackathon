@@ -6,7 +6,7 @@ class Get_Started_Form_Page():
     def __init__(self, driver):
         self.driver = driver
 
-    @allure.step("Get list of forms to verify if the form poped up")
+    @allure.step("Get list of forms to verify if the form popped up")
     def get_list_of_forms(self):
         return self.driver.find_elements(By.CLASS_NAME, "MuiDialog-paper")
 
@@ -26,11 +26,9 @@ class Get_Started_Form_Page():
     def get_account_number_input(self):
         return self.driver.find_element(By.ID, "bankaccount-accountNumber-input")
 
-
     @allure.step("Save new bank account data button")
     def get_save_data_btn(self):
         return self.driver.find_element(By.CSS_SELECTOR, "[data-test='bankaccount-submit']")
-
 
     @allure.step("Get Done button to finish form")
     def get_done_btn(self):

@@ -1,3 +1,5 @@
+import allure
+
 from main.pageObjects.calculator_desktop.calculator_page import Calculator_Page
 from main.pageObjects.electron_app.electron_main_page import Electron_Main_Page
 from main.pageObjects.finan_calculator_appium.fn_calculator_page import Fn_Calculator_Page
@@ -11,11 +13,10 @@ from main.pageObjects.real_world_web.signup_page import Signup_Page
 from main.pageObjects.real_world_web.transaction_page import Transaction_Page
 from main.utilities import base
 
-login_page = None
-
 
 class Manage_Pages:
     @staticmethod
+    @allure.title("Initializing Web Pages ")
     def init_web_pages(driver):
         base.login_page = Login_Page(driver)
         base.signup_page = Signup_Page(driver)
@@ -26,14 +27,17 @@ class Manage_Pages:
         base.notification_page = Notifications_Page(driver)
 
     @staticmethod
+    @allure.title("Initializing Desktop Pages ")
     def init_desktop_pages(driver):
         base.desktop_calc = Calculator_Page(driver)
 
     @staticmethod
+    @allure.title("Initializing Appium Pages ")
     def init_appium_pages(driver):
         base.fn_main = Fn_Main_Page(driver)
         base.fn_calculator = Fn_Calculator_Page(driver)
 
     @staticmethod
+    @allure.title("Initializing Electron Pages ")
     def init_electron_pages(driver):
         base.electron_page = Electron_Main_Page(driver)

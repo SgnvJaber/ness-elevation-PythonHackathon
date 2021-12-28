@@ -1,0 +1,89 @@
+{
+  "1231dcb9c05adafe8997769e353d117b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "items" : [ {
+      "uid" : "3ac1b01f308eb333",
+      "reportUrl" : "http://localhost:9090/job/Api/3/allure/#testresult/3ac1b01f308eb333",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640717623327,
+        "stop" : 1640717625342,
+        "duration" : 2015
+      }
+    }, {
+      "uid" : "49512f4033066276",
+      "reportUrl" : "http://localhost:9090/job/Api/2/allure/#testresult/49512f4033066276",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640717608199,
+        "stop" : 1640717610216,
+        "duration" : 2017
+      }
+    } ]
+  },
+  "91e09fa8db679d0a0a03bd6c7896bafc" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "items" : [ {
+      "uid" : "1b0e7dd1c5a3c895",
+      "reportUrl" : "http://localhost:9090/job/Api/3/allure/#testresult/1b0e7dd1c5a3c895",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640717625345,
+        "stop" : 1640717627364,
+        "duration" : 2019
+      }
+    }, {
+      "uid" : "9a366c9ac39cf003",
+      "reportUrl" : "http://localhost:9090/job/Api/2/allure/#testresult/9a366c9ac39cf003",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640717610220,
+        "stop" : 1640717612235,
+        "duration" : 2015
+      }
+    } ]
+  },
+  "77e5d9da9ea86cc23e32c7a822c4c8e2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "items" : [ {
+      "uid" : "d96e238291bf2ecb",
+      "reportUrl" : "http://localhost:9090/job/Api/3/allure/#testresult/d96e238291bf2ecb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640717621305,
+        "stop" : 1640717623324,
+        "duration" : 2019
+      }
+    }, {
+      "uid" : "da4574b42783264c",
+      "reportUrl" : "http://localhost:9090/job/Api/2/allure/#testresult/da4574b42783264c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640717606176,
+        "stop" : 1640717608195,
+        "duration" : 2019
+      }
+    } ]
+  }
+}

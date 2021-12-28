@@ -1,0 +1,283 @@
+{
+  "uid" : "d96e238291bf2ecb",
+  "name" : "Verify post new song success",
+  "fullName" : "tests.test_api.Test_Api#test_post",
+  "historyId" : "77e5d9da9ea86cc23e32c7a822c4c8e2",
+  "time" : {
+    "start" : 1640717621305,
+    "stop" : 1640717623324,
+    "duration" : 2019
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "init_api",
+    "time" : {
+      "start" : 1640717621304,
+      "stop" : 1640717621304,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Getting data from external XML file",
+      "time" : {
+        "start" : 1640717621304,
+        "stop" : 1640717621304,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "node_name",
+        "value" : "'serverUrl'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Getting data from external XML file",
+      "time" : {
+        "start" : 1640717621304,
+        "stop" : 1640717621304,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "node_name",
+        "value" : "'contentType'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 2,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Verify we are able to add new song.",
+      "time" : {
+        "start" : 1640717621306,
+        "stop" : 1640717623324,
+        "duration" : 2018
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Getting data from external XML file",
+        "time" : {
+          "start" : 1640717621306,
+          "stop" : 1640717621306,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "node_name",
+          "value" : "'newSongAuthor'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Getting data from external XML file",
+        "time" : {
+          "start" : 1640717621306,
+          "stop" : 1640717621306,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "node_name",
+          "value" : "'newSongName'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Getting data from external XML file",
+        "time" : {
+          "start" : 1640717621306,
+          "stop" : 1640717621306,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "node_name",
+          "value" : "'newSongYear'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Add new song to server",
+        "time" : {
+          "start" : 1640717621306,
+          "stop" : 1640717623324,
+          "duration" : 2018
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Post new data to server.",
+          "time" : {
+            "start" : 1640717621306,
+            "stop" : 1640717623324,
+            "duration" : 2018
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "category_name",
+            "value" : "'songs'"
+          }, {
+            "name" : "payload",
+            "value" : "{'author': 'Dua Lipa', 'song-title': 'Levitating', 'year': '2020'}"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "author",
+          "value" : "'Dua Lipa'"
+        }, {
+          "name" : "song_title",
+          "value" : "'Levitating'"
+        }, {
+          "name" : "year",
+          "value" : "'2020'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      }, {
+        "name" : "Verify actual value is as expected",
+        "time" : {
+          "start" : 1640717623324,
+          "stop" : 1640717623324,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "actual",
+          "value" : "201"
+        }, {
+          "name" : "expected",
+          "value" : "201"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 6,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 7,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_api')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Api"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-LVSINNE"
+  }, {
+    "name" : "thread",
+    "value" : "24108-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "bc12f5fec0eea57b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640717606176,
+        "stop" : 1640717608195,
+        "duration" : 2019
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "da4574b42783264c",
+        "reportUrl" : "http://localhost:9090/job/Api/2/allure/#testresult/da4574b42783264c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640717606176,
+          "stop" : 1640717608195,
+          "duration" : 2019
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.usefixtures('init_api')" ]
+  },
+  "source" : "d96e238291bf2ecb.json",
+  "parameterValues" : [ ]
+}

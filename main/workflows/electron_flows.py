@@ -8,11 +8,11 @@ class Electron_Flows():
 
     @staticmethod
     @allure.step("Get Menu Size")
-    def action_get_menu_size():
+    def get_menu_size():
         return Ui_Actions.get_list_size(base.electron_page.get_menu_elements())
 
     @staticmethod
     @allure.step("Get Communication Button's Attribute")
-    def action_get_communication_attribute():
+    def get_communication_attribute():
         Ui_Actions.click(base.electron_page.get_communication_element())
         return Ui_Actions.get_attribute(base.electron_page.get_communication_element(), "class")

@@ -1,5 +1,3 @@
-import time
-
 import allure
 from selenium.webdriver.common.by import By
 
@@ -22,4 +20,4 @@ class Login_Page():
 
     @allure.step("Get goto submit page")
     def get_signup_link(self):
-            return self.driver.find_element(By.XPATH, "//a[@data-test='signup']")
+        return self.driver.find_element(By.XPATH, "//a[@data-test='signup']")

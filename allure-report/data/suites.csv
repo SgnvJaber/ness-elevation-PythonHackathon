@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Dec 28 20:53:45 IST 2021","Tue Dec 28 20:53:47 IST 2021","2019","tests","test_api","Test_Api","","","Verify updating partial data at specific id",""
+"passed","Tue Dec 28 20:53:43 IST 2021","Tue Dec 28 20:53:45 IST 2021","2015","tests","test_api","Test_Api","","","Verify get all data from specific category",""
+"passed","Tue Dec 28 20:53:41 IST 2021","Tue Dec 28 20:53:43 IST 2021","2019","tests","test_api","Test_Api","","","Verify post new song success",""

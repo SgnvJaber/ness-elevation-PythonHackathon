@@ -1,0 +1,14 @@
+1640716836028	geckodriver	INFO	Listening on 127.0.0.1:60612
+1640716839047	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Saed\\AppData\\Local\\Temp\\rust_mozprofileGXtQ0E"
+1640716839758	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Saed\\AppData\\Local\\Temp\\rust_mozprofileGXtQ0E\\search.json.mozlz4", (void 0)))
+1640716842577	Marionette	INFO	Listening on port 60620
+1640716842686	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640716872484	Marionette	INFO	Stopped listening on port 60620
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Saed\AppData\Local\Temp\rust_mozprofileGXtQ0E\protections.sqlite

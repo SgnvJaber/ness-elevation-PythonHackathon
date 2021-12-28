@@ -11,42 +11,42 @@ class Web_Flows():
 
     @staticmethod
     @allure.step("Sign in Flow:")
-    def action_sign_in(username, password):
+    def sign_in(username, password):
         Ui_Actions.update_text(base.login_page.get_username_field(), username)
         Ui_Actions.update_text(base.login_page.get_password_field(), password)
         Ui_Actions.click(base.login_page.submit())
 
     @staticmethod
-    @allure.step("sign up new users + verify existence")
-    def action_sign_up_new_users():
+    @allure.step("Sign up new users + make sure user was added")
+    def sign_up_new_users():
         list_of_users = DB_Actions.get_list_of_new_users()
         for new_user in list_of_users:
             Web_Flows.add_new_user(new_user)
             Web_Flows.verify_new_user_added(new_user)
-            if len(base.get_started_form_page.get_list_of_forms()) > 0:
+            if Ui_Actions.get_list_size(base.get_started_form_page.get_list_of_forms()) > 0:
                 Web_Flows.fill_get_started_form(new_user)
-            Web_Flows.action_log_out()
+            Web_Flows.log_out()
 
     @staticmethod
-    @allure.step("log out")
-    def action_log_out():
+    @allure.step("Log out")
+    def log_out():
         Ui_Actions.click(base.menu_page.get_logout_btn())
 
     @staticmethod
-    @allure.step("signup new user")
+    @allure.step("Signup new user")
     def add_new_user(new_user):
         Ui_Actions.elem_double_click(base.login_page.get_signup_link())
-        Ui_Actions.update_text(base.signup_page.get_firstName_field(), new_user[0])
-        Ui_Actions.update_text(base.signup_page.get_lastName_field(), new_user[1])
+        Ui_Actions.update_text(base.signup_page.get_first_name_field(), new_user[0])
+        Ui_Actions.update_text(base.signup_page.get_last_name_field(), new_user[1])
         Ui_Actions.update_text(base.signup_page.get_username_field(), new_user[2])
         Ui_Actions.update_text(base.signup_page.get_password_field(), new_user[3])
-        Ui_Actions.update_text(base.signup_page.get_confirmPassword_field(), new_user[3])
+        Ui_Actions.update_text(base.signup_page.get_confirm_password_field(), new_user[3])
         Ui_Actions.click(base.signup_page.get_submit_btn())
 
     @staticmethod
     @allure.step("signup new user")
     def verify_new_user_added(new_user):
-        Web_Flows.action_sign_in(new_user[2], new_user[3])
+        Web_Flows.sign_in(new_user[2], new_user[3])
         verifications.do_soft_assert(new_user[2], base.menu_page.get_username_logged_in().text.split('@')[1])
 
     @staticmethod
@@ -67,23 +67,26 @@ class Web_Flows():
         Ui_Actions.click(base.transaction_page.get_contact_person())
         Ui_Actions.update_text(base.transaction_page.get_amount_input(), amount_to_transact)
         Ui_Actions.update_text(base.transaction_page.get_note_input(), transaction_note)
+
+        # Store current balance of this account
         current_balance = base.menu_page.get_balance().text.split('$')[1]
+
         Ui_Actions.click(base.transaction_page.get_payment_submit())
-        time.sleep(5)
+        time.sleep(0.5)
         return current_balance
 
     @staticmethod
-    @allure.step("get a menus size")
-    def get_menus_size():
-        return len(base.menu_page.get_menus_size())
+    @allure.step("get a menu size")
+    def get_menu_size():
+        return Ui_Actions.get_list_size(base.menu_page.get_menu_size())
 
     @staticmethod
-    @allure.step("Remove Notification size")
+    @allure.step("Remove first notification using aplitools")
     def remove_notification(test_name):
         base.eyes.open(base.driver, test_name, "Notification Test")
         Ui_Actions.click(base.menu_page.get_notifications())
         base.eyes.check_window('Notification Before Remove')
         Ui_Actions.click(base.notification_page.get_dismiss_elements()[0])
         base.eyes.check_window('Notification After Remove')
-        base.eyes.close()
-        base.eyes.abort()
+        # base.eyes.close()
+        # base.eyes.abort()

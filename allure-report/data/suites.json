@@ -1,0 +1,56 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "test_api",
+      "children" : [ {
+        "name" : "Test_Api",
+        "children" : [ {
+          "name" : "Verify post new song success",
+          "uid" : "d96e238291bf2ecb",
+          "parentUid" : "1b1dc44e8c470220ca96520b78b95ef1",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640717621305,
+            "stop" : 1640717623324,
+            "duration" : 2019
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify get all data from specific category",
+          "uid" : "3ac1b01f308eb333",
+          "parentUid" : "1b1dc44e8c470220ca96520b78b95ef1",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640717623327,
+            "stop" : 1640717625342,
+            "duration" : 2015
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify updating partial data at specific id",
+          "uid" : "1b0e7dd1c5a3c895",
+          "parentUid" : "1b1dc44e8c470220ca96520b78b95ef1",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640717625345,
+            "stop" : 1640717627364,
+            "duration" : 2019
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "1b1dc44e8c470220ca96520b78b95ef1"
+      } ],
+      "uid" : "96c4bd7551edc9a74f8000f846817930"
+    } ],
+    "uid" : "e387fa4bb326b54ea8c19c2822aba374"
+  } ]
+}

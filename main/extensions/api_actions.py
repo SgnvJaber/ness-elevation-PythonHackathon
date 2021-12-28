@@ -17,6 +17,6 @@ class Api_Actions:
         return requests.get(base.server_url + category)
 
     @staticmethod
-    @allure.step('Update data patialy.')
+    @allure.step('Update data partially.')
     def patch_data(category, item_id, payload):
         return requests.patch(base.server_url + category + "/" + str(item_id), json=payload).status_code

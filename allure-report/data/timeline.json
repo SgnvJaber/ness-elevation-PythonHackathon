@@ -1,0 +1,95 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-LVSINNE",
+    "children" : [ {
+      "name" : "24108-MainThread",
+      "children" : [ {
+        "name" : "Verify updating partial data at specific id",
+        "uid" : "1b0e7dd1c5a3c895",
+        "parentUid" : "892b8eb8f4a8171288cdcbd9f93257cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640717625345,
+          "stop" : 1640717627364,
+          "duration" : 2019
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify post new song success",
+        "uid" : "d96e238291bf2ecb",
+        "parentUid" : "892b8eb8f4a8171288cdcbd9f93257cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640717621305,
+          "stop" : 1640717623324,
+          "duration" : 2019
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify get all data from specific category",
+        "uid" : "3ac1b01f308eb333",
+        "parentUid" : "892b8eb8f4a8171288cdcbd9f93257cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640717623327,
+          "stop" : 1640717625342,
+          "duration" : 2015
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "892b8eb8f4a8171288cdcbd9f93257cc"
+    }, {
+      "name" : "15884-MainThread",
+      "children" : [ {
+        "name" : "Verify get all data from specific category",
+        "uid" : "9fba2d68172ea9f7",
+        "parentUid" : "9ac571af9adde19e3c907d4ef9342fa3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640717608199,
+          "stop" : 1640717610216,
+          "duration" : 2017
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify updating partial data at specific id",
+        "uid" : "66e1968d12f7997b",
+        "parentUid" : "9ac571af9adde19e3c907d4ef9342fa3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640717610220,
+          "stop" : 1640717612235,
+          "duration" : 2015
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify post new song success",
+        "uid" : "bc12f5fec0eea57b",
+        "parentUid" : "9ac571af9adde19e3c907d4ef9342fa3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640717606176,
+          "stop" : 1640717608195,
+          "duration" : 2019
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9ac571af9adde19e3c907d4ef9342fa3"
+    } ],
+    "uid" : "3196cffb300f9b470aadf758110412de"
+  } ]
+}

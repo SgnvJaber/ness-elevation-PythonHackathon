@@ -14,7 +14,7 @@ class Fn_Main_Page():
     def get_title_element(self):
         return self.driver.find_element(By.XPATH, "//*[@id='toolbar']/android.widget.TextView")
 
-    @allure.step("Get Currency Converter Element ")
+    @allure.step("Get Calculator Element ")
     def get_calculator_element(self):
         return self.driver.find_element(By.XPATH, "//*[@text='Calculator']")
 

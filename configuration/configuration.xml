@@ -2,11 +2,23 @@
 <Environment>
     <Browser>chrome</Browser>
     <appliToolsKey>hyoZA833Dj3d3KC6iPQ080IYNoOyDTi4cJfXnACbe6M110</appliToolsKey>
-    <!-- Test 1 - Login -->
-    <webUrl>http://localhost:4000</webUrl>
-    <username>Katharina_Bernier</username>
-    <password>s3cret</password>
-    <expected_balance>0</expected_balance>
+
+    <!-- *********** WEB PARAMETERS *********** -->
+        <!-- Test 1 - Login -->
+        <webUrl>http://localhost:4000</webUrl>
+        <username>Katharina_Bernier</username>
+        <password>s3cret</password>
+        <expected_balance>0</expected_balance>
+        <CSVFilePath>C:\Automation\Python\python_hackathon\ddt_files\calculation.csv</CSVFilePath>
+
+        <!-- Test 3 - Transaction -->
+        <contactNameToSearch>Arely Kertzmann</contactNameToSearch>
+        <amountToTransact>3</amountToTransact>
+        <transactNote>Payment for the car</transactNote>
+
+        <!-- Test 4 - Transaction -->
+        <menusSize>4</menusSize>
+    <!-- *********** END OF WEB PARAMETERS *********** -->
 
     <!--  DB   -->
     <host>sql11.freemysqlhosting.net</host>
@@ -14,21 +26,34 @@
     <databaseDB>sql11454991</databaseDB>
     <passwordDB>6lcdegJM51</passwordDB>
 
-    <!-- Test 3 - Transaction -->
-    <contactNameToSearch>Arely Kertzmann</contactNameToSearch>
-    <amountToTransact>3</amountToTransact>
-    <transactNote>Payment for the car</transactNote>
-
-    <!-- Test 4 - Transaction -->
-    <menusSize>4</menusSize>
-
-    <!-- JSON Server -->
+    <!-- *********** JSON SERVER *********** -->
     <serverUrl>http://localhost:3000/</serverUrl>
     <contentType>application/json</contentType>
+
+        <!-- Test Post -->
+        <newSongAuthor>Dua Lipa</newSongAuthor>
+        <newSongName>Levitating</newSongName>
+        <newSongYear>2020</newSongYear>
+
+        <!-- Test Get -->
+        <searchByCategory>songs</searchByCategory>
+
+        <!-- Test Patch -->
+        <songID>7</songID>
+        <newAuthorNameForPatch>some author2</newAuthorNameForPatch>
+        <newSongNameForPatch>some song2</newSongNameForPatch>
+
+    <!-- *********** END OF JSON SERVER *********** -->
 
     <!-- Electron -->
     <elctronApp>C:\Automation\ElectronApiDemos\ElectronApiDemos.exe</elctronApp>
     <elctronDriver>C:\Automation\ElectronDriver\electrondriver.exe</elctronDriver>
 
+    <!-- Mobile -->
+    <expectedTitle>fncalculator.com</expectedTitle>
+    <firstNum>2</firstNum>
+    <secondNumber>3</secondNumber>
+    <expectedMultResult>6</expectedMultResult>
+    <expectedAddResult>5</expectedAddResult>
 
 </Environment>

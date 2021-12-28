@@ -1,0 +1,259 @@
+{
+  "uid" : "66e1968d12f7997b",
+  "name" : "Verify updating partial data at specific id",
+  "fullName" : "tests.test_api.Test_Api#test_patch",
+  "historyId" : "91e09fa8db679d0a0a03bd6c7896bafc",
+  "time" : {
+    "start" : 1640717610220,
+    "stop" : 1640717612235,
+    "duration" : 2015
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "init_api",
+    "time" : {
+      "start" : 1640717606173,
+      "stop" : 1640717606174,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Getting data from external XML file",
+      "time" : {
+        "start" : 1640717606173,
+        "stop" : 1640717606174,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "node_name",
+        "value" : "'serverUrl'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Getting data from external XML file",
+      "time" : {
+        "start" : 1640717606174,
+        "stop" : 1640717606174,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "node_name",
+        "value" : "'contentType'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 2,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "By sending id and some data, we ar updating the data at that specific id, make sure it's success",
+      "time" : {
+        "start" : 1640717610222,
+        "stop" : 1640717612235,
+        "duration" : 2013
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Getting data from external XML file",
+        "time" : {
+          "start" : 1640717610222,
+          "stop" : 1640717610223,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "node_name",
+          "value" : "'songID'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Getting data from external XML file",
+        "time" : {
+          "start" : 1640717610224,
+          "stop" : 1640717610224,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "node_name",
+          "value" : "'newAuthorNameForPatch'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Getting data from external XML file",
+        "time" : {
+          "start" : 1640717610224,
+          "stop" : 1640717610224,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "node_name",
+          "value" : "'newSongNameForPatch'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Update partial data in server data base.",
+        "time" : {
+          "start" : 1640717610224,
+          "stop" : 1640717612234,
+          "duration" : 2010
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Update data partially.",
+          "time" : {
+            "start" : 1640717610224,
+            "stop" : 1640717612234,
+            "duration" : 2010
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "category",
+            "value" : "'songs'"
+          }, {
+            "name" : "item_id",
+            "value" : "'7'"
+          }, {
+            "name" : "payload",
+            "value" : "{'author': 'some author2', 'song-title': 'some song2'}"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "category",
+          "value" : "'songs'"
+        }, {
+          "name" : "item_id",
+          "value" : "'7'"
+        }, {
+          "name" : "author_name",
+          "value" : "'some author2'"
+        }, {
+          "name" : "song_name",
+          "value" : "'some song2'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      }, {
+        "name" : "Verify actual value is as expected",
+        "time" : {
+          "start" : 1640717612235,
+          "stop" : 1640717612235,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "actual",
+          "value" : "200"
+        }, {
+          "name" : "expected",
+          "value" : "200"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 6,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 7,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_api')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Api"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-LVSINNE"
+  }, {
+    "name" : "thread",
+    "value" : "15884-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_api')" ]
+  },
+  "source" : "66e1968d12f7997b.json",
+  "parameterValues" : [ ]
+}

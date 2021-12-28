@@ -1,0 +1,31 @@
+[ {
+  "uid" : "d96e238291bf2ecb",
+  "name" : "Verify post new song success",
+  "time" : {
+    "start" : 1640717621305,
+    "stop" : 1640717623324,
+    "duration" : 2019
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3ac1b01f308eb333",
+  "name" : "Verify get all data from specific category",
+  "time" : {
+    "start" : 1640717623327,
+    "stop" : 1640717625342,
+    "duration" : 2015
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b0e7dd1c5a3c895",
+  "name" : "Verify updating partial data at specific id",
+  "time" : {
+    "start" : 1640717625345,
+    "stop" : 1640717627364,
+    "duration" : 2019
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

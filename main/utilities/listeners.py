@@ -39,20 +39,6 @@ class EventListener(AbstractEventListener):
         else:
             print("After Change Value ", element.text)
 
-    # ----------------------- Start Tricky Option -------------------------------
-
-    # def before_click(self, element, driver):
-    #     if element.tag_name == "input":
-    #         print("Before Click ", element.get_attribute("value"))
-    #     else:
-    #         print("Before Click ", element.text)
-    #
-    # def after_click(self, element, driver):
-    #     if element.tag_name == "input":   # get stale element reference exception
-    #         print("Before Click ", element.get_attribute("value"))
-    #     else:
-    #         print("Before Click ", element.text)
-
     def before_click(self, element, driver):
         EventListener.button_text = element.get_attribute("value")
         if element.tag_name == "input":
@@ -63,7 +49,6 @@ class EventListener(AbstractEventListener):
     def after_click(self, element, driver):
         print("After Click ", EventListener.button_text)
 
-    # ----------------------- End Tricky Option -------------------------------
 
     def before_execute_script(self, script, driver):
         print("Before Execute Script ", script)
