@@ -3,7 +3,7 @@
 
 Authors: Diana Choubaev, Saed Jaber, Tehila Yafee
 Overview
---------------------
+
 ###This project performs automated testing of various applications:
 
 Web based Real World App  <br>
