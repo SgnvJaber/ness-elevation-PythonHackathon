@@ -88,5 +88,5 @@ class Web_Flows():
         base.eyes.check_window('Notification Before Remove')
         Ui_Actions.click(base.notification_page.get_dismiss_elements()[0])
         base.eyes.check_window('Notification After Remove')
-        # base.eyes.close()
-        # base.eyes.abort()
+        base.eyes.close()
+        base.eyes.abort()
