@@ -1,17 +1,17 @@
-#QA Automation Testing Showcase
-####This project is made during our bootcamp to demonstrate our knowledge and capabilities in QA Automation.
+# QA Automation Testing Showcase
+#### This project is made during our bootcamp to demonstrate our knowledge and capabilities in QA Automation.
 
 Authors: Diana Choubaev, Saed Jaber, Tehila Yafee
 Overview
-
-###This project performs automated testing of various applications:
+---
+### This project performs automated testing of various applications:
 
 Web based Real World App  <br>
 API - JSON-Server <br>
 Mobile application - Financial Calculators App <br>
 Electron application - API Demos App <br>
 Desktop application - Windows Calculator <br>
-###Infrastructure includes:
+### Infrastructure includes:
 
 - Layers (utilities, extensions, workflows...)
 - Page object model design pattern
@@ -24,7 +24,7 @@ Desktop application - Windows Calculator <br>
 - Visual testing (Aplitools)
 - Database support
 - CI & CD support
-###Tools & Frameworks:
+### Tools & Frameworks:
 
 - PyTest Framework
 - Listeners interface for Logs & Customizable PyTest Reports
@@ -36,18 +36,18 @@ Desktop application - Windows Calculator <br>
 - DDT using CSV file holding math calculations for Desktop tests
 - Jenkins for Automating Test executions & Test Pipelines
 - Allure Reports - Reporting System
-##Test Overview
+## Test Overview
 
 Api tests:
 1. Post a new song
 2. Show all songs 
 3. Update specific song details
 
-####Desktop tests:
+#### Desktop tests:
 
 1. Addition between 2 numbers using DDT
 
-####Web tests:
+#### Web tests:
 
 1. Log in
 2. Signup new users using the database
@@ -55,14 +55,14 @@ Api tests:
 4. Notifications count using Aplitools
 5. Verify left-side menu has 4 options
 
-####Mobile tests:
+#### Mobile tests:
 
 1. Verify number of calculators in total 
 2. Verify app title
 3. Verify multiplication
 4. Verify addition
 
-####Electron tests:
+#### Electron tests:
 
 1. Verify number of menu options
 2. Verify an element was selected
