@@ -1,0 +1,56 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "author": "Pharrell Williams",
+      "song-title": "Happy",
+      "year": 2013
+    },
+    {
+      "id": 2,
+      "author": "Adele",
+      "song-title": "Rolling in the Deep",
+      "year": 2011
+    },
+    {
+      "id": 3,
+      "author": "Lindsey Stirling",
+      "song-title": "Crystallize",
+      "year": 2012
+    },
+    {
+      "author": "Dua Lipa",
+      "song-title": "Levitating",
+      "year": 2020,
+      "id": 4
+    },
+    {
+      "author": "some author",
+      "song-title": "some song",
+      "year": 2020,
+      "id": 5
+    }
+  ],
+  "quotes": [
+    {
+      "author": "Dalai Lama",
+      "quote": "The purpose of our lives is to be happy.",
+      "id": 1
+    },
+    {
+      "author": "John Lennon",
+      "quote": "Life is what happens when you're busy making other plans.",
+      "id": 2
+    },
+    {
+      "author": "Stephen King",
+      "quote": "Get busy living or get busy dying.",
+      "id": 3
+    },
+    {
+      "author": "Mae West",
+      "quote": "You only live once, but if you do it right, once is enough.",
+      "id": 4
+    }
+  ]
+}

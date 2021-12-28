@@ -1,5 +1,6 @@
 import mysql.connector
 import pytest
+from applitools.selenium import Eyes
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
@@ -17,9 +18,18 @@ def init_web_app(request):
     base.action = ActionChains(base.driver)
     base.my_db = init_DB()
     base.driver.implicitly_wait(5)
+    base.eyes = Eyes()
+    base.eyes.api_key = Common_Ops.get_data("appliToolsKey")
     yield
     base.my_db.close()
-    base.driver.quit()
+    # base.driver.quit()
+
+
+@pytest.fixture(scope='class')
+def init_api(request):
+    base.server_url = Common_Ops.get_data('serverUrl')
+    base.header = {'Content-type': Common_Ops.get_data('contentType')}
+    print(base.header, "*******************************")
 
 
 @pytest.fixture(scope='class')
@@ -46,6 +56,20 @@ def init_appium(request):
     Manage_Pages.init_appium_pages(base.driver)
     yield
     base.driver.quit()
+
+
+@pytest.fixture(scope='class')
+def init_electron(request):
+    electron_app = Common_Ops.get_data("elctronApp")
+    options = webdriver.ChromeOptions()
+    options.binary_location = electron_app
+    edriver = Common_Ops.get_data("elctronDriver")
+    driver = webdriver.Chrome(chrome_options=options, executable_path=edriver)
+    Manage_Pages.init_electron_pages(driver)
+    # expected_menu_size = 6
+    driver.implicitly_wait(5)
+    yield
+    driver.quit()
 
 
 def init_DB():

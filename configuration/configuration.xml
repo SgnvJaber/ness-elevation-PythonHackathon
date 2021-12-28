@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Environment>
     <Browser>chrome</Browser>
+    <appliToolsKey>hyoZA833Dj3d3KC6iPQ080IYNoOyDTi4cJfXnACbe6M110</appliToolsKey>
     <!-- Test 1 - Login -->
     <webUrl>http://localhost:4000</webUrl>
     <username>Katharina_Bernier</username>
@@ -20,5 +21,14 @@
 
     <!-- Test 4 - Transaction -->
     <menusSize>4</menusSize>
+
+    <!-- JSON Server -->
+    <serverUrl>http://localhost:3000/</serverUrl>
+    <contentType>application/json</contentType>
+
+    <!-- Electron -->
+    <elctronApp>C:\Automation\ElectronApiDemos\ElectronApiDemos.exe</elctronApp>
+    <elctronDriver>C:\Automation\ElectronDriver\electrondriver.exe</elctronDriver>
+
 
 </Environment>

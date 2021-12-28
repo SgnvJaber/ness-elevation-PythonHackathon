@@ -1,28 +1,19 @@
-# from selenium import webdriver
-# from selenium.webdriver.common.by import By
-#
-# electron_app = 'C:\\Automation\\ElectronApiDemos\\ElectronApiDemos.exe'
-# edriver = 'C:\\Automation\\ElectronDriver\\electrondriver.exe'
-# expected_menu_size = 6
-#
-#
-# class Test_Ex:
-#
-#     def setup_class(self):
-#         options = webdriver.ChromeOptions()
-#         options.binary_location = electron_app
-#         global driver
-#         driver = webdriver.Chrome(chrome_options=options, executable_path=edriver)
-#         driver.implicitly_wait(5)
-#
-#     def test_01_electron(self):
-#         menu = driver.find_elements(By.XPATH, "//nav/div/h5")
-#         assert len(menu) == expected_menu_size
-#
-#     def teardown_class(self):
-#         driver.quit()
+import allure
 
-# #          driver.find_element(By.ID, "button-ipc").click()
-# #         driver.find_element(By.CSS_SELECTOR, ".u-category-communication .is-open .demo-controls .demo-button").click()
-# #         assert driver.find_element(By.CSS_SELECTOR,
-# #                                    ".u-category-communication .is-open .demo-controls .demo-response").is_displayed()
+from configuration.conftest import *
+from main.extensions import verifications
+from main.workflows.electron_flows import Electron_Flows
+
+
+@pytest.mark.usefixtures('init_electron')
+class Test_Electron:
+
+    @allure.title("Verify Menu size is as expected")
+    @allure.step("This test verify that the menu size is as expected")
+    def test_menu_size(self):
+        verifications.verify_equals(Electron_Flows.action_get_menu_size(), 6)
+
+    @allure.title("Verify Element is Selected")
+    @allure.step("This test verify that element is slected after clicking on it")
+    def test_element_is_selected(self):
+        verifications.contains(Electron_Flows.action_get_communication_attribute(), "is-selected")

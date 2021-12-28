@@ -27,3 +27,13 @@ class Ui_Actions:
     @allure.step("Get text from element")
     def get_text(element):
         return element.text
+
+    @staticmethod
+    @allure.step("Get Element Attribute's value")
+    def get_attribute(element, attribute):
+        return element.get_attribute(attribute)
+
+    @staticmethod
+    @allure.step("Get list size")
+    def get_list_size(list):
+        return len(list)

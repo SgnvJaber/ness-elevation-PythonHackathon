@@ -1,10 +1,6 @@
 import time
 
 import allure
-from selenium.webdriver import ActionChains
-from smart_assertions import soft_assert, verify_expectations
-import configuration.conftest
-from main import utilities
 from main.extensions import verifications
 from main.extensions.db_actions import DB_Actions
 from main.extensions.ui_actions import Ui_Actions
@@ -30,7 +26,6 @@ class Web_Flows():
             if len(base.get_started_form_page.get_list_of_forms()) > 0:
                 Web_Flows.fill_get_started_form(new_user)
             Web_Flows.action_log_out()
-
 
     @staticmethod
     @allure.step("log out")
@@ -80,11 +75,15 @@ class Web_Flows():
     @staticmethod
     @allure.step("get a menus size")
     def get_menus_size():
-       return len(base.menu_page.get_menus_size())
+        return len(base.menu_page.get_menus_size())
 
-
-
-
-
-
-
+    @staticmethod
+    @allure.step("Remove Notification size")
+    def remove_notification(test_name):
+        base.eyes.open(base.driver, test_name, "Notification Test")
+        Ui_Actions.click(base.menu_page.get_notifications())
+        base.eyes.check_window('Notification Before Remove')
+        Ui_Actions.click(base.notification_page.get_dismiss_elements()[0])
+        base.eyes.check_window('Notification After Remove')
+        base.eyes.close()
+        base.eyes.abort()
