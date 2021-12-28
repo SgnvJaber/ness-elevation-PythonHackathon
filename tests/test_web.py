@@ -15,12 +15,14 @@ class Test_Web:
         Web_Flows.sign_in(Common_Ops.get_data("username"), Common_Ops.get_data("password"))
 
     def teardown_method(self):
-        Web_Flows.log_out()
+        pass
+        # Web_Flows.log_out()
 
     @allure.title("Verify Login")
     @allure.step("this test verify login works")
     def test_verify_login(self):
         actual_balance = base.menu_page.get_balance().text.split('$')[1]
+        Web_Flows.log_out()
         verifications.verify_equals(actual_balance, Common_Ops.get_data('expected_balance'))
 
     @allure.title("Verify Signup")
@@ -39,16 +41,19 @@ class Test_Web:
                                        Common_Ops.get_data("transactNote")))
         new_balance = Common_Ops.remove_comma(
             base.menu_page.get_balance().text.split('$')[1])
+        Web_Flows.log_out()
         verifications.verify_equals(math.ceil(float(current_balance) - float(new_balance)),
                                     float(Common_Ops.get_data("amountToTransact")))
-
-    @allure.title("Verify Notification Change Using Appli tools")
-    @allure.step("this test verify notification is removed using automating graphic elements ")
-    def test_notification_change_applitools(self):
-        Web_Flows.remove_notification("test_really")
 
     @allure.title("Verify Menu Size is as expected")
     @allure.step("this test that menu size is as expected ")
     def test_get_menus_size(self):
         size = Web_Flows.get_menu_size()
+        Web_Flows.log_out()
         verifications.verify_equals(size, int(Common_Ops.get_data("menusSize")))
+
+    @allure.title("Verify Notification Change Using Appli tools")
+    @allure.step("this test verify notification is removed using automating graphic elements ")
+    def test_notification_change_applitools(self):
+        Web_Flows.remove_notification("test_really")
+        Web_Flows.log_out()
